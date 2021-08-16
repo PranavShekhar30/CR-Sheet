@@ -14,7 +14,7 @@ public class Solution{
         }
         while(low <= high){
             int mid = low + (high - low)/2;
-            if(allocationIsPossible(mid)){
+            if(allocationIsPossible(A, mid, B)){
                 ans = mid;
                 high = mid -1;
             }
@@ -24,7 +24,7 @@ public class Solution{
         }
         return ans;
     }
-    boolean allocationIsPoosible(int barrier){
+    boolean allocationIsPossible(int A, int barrier, int B){
         int allocated_student = 1;
         int pages = 0;
 
